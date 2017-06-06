@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Things</title>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(e) {
+      console.log(e);
+      var element = document.getElementById("input");
+      var buttonElement = document.getElementById("button");
+      console.dir(button);
+      var list = document.getElementById("list");
+      buttonElement.onclick = function(e) {
+        console.log("we are clicking");
+        console.dir(list);
+        var inputVal = element.value;
+        // list.innerHTML += "<li>" + inputVal + "</li>";
+        list.innerHTML += `<li>${ inputVal }</li>`;
+        element.value = "";
+      };
+    });
+
+  </script>
+
+</head>
+<body>
+  <input id="input" type="text" name="item">
+  <button id="button" type="submit" name="button">Add item</button>
+  <ul id="list">
+
+  </ul>
+
+</body>
+</html>
