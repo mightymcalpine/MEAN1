@@ -9,13 +9,13 @@ function getItemFromDB(query, callback) {
     callback(data);
   }, 1000);
 }
-//
-// var things = getItemFromDB('items', function(data) {
-//   // do something with data from database
-//   console.log('inside callback');
-//   console.log(data.name);
-// });
-// console.log(things);
+
+var things = getItemFromDB('items', function(data) {
+  // do something with data from database
+  console.log('inside callback');
+  console.log(data.name);
+});
+console.log(things);
 
 
 
